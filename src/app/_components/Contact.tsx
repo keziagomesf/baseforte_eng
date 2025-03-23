@@ -26,9 +26,9 @@ export function Contact() {
     };
 
     return (
-        <footer className="bg-[#1D282E] text-white py-12 px-6">
+        <footer className="bg-[#1D282E] text-white py-12 px-6" id="contact">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-                {/* Formulário de Contato */}
+               
                 <div>
                     <h3 className="text-2xl font-bold text-[#FCA311] mb-6">Entre em Contato</h3>
                     <form className="space-y-4">

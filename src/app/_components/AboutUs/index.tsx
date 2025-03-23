@@ -2,14 +2,14 @@ export function About() {
     return (
         <section className="bg-[#1D282E] text-white py-16 px-6 md:px-12">
             <div className="max-w-7xl mx-auto">
-                {/* Título */}
+                
                 <h2 className="text-4xl font-bold text-[#FCA311] text-center mb-12">
                     Sobre Nós
                 </h2>
 
-                {/* Grid para História e Valores */}
+                
                 <div className="grid md:grid-cols-2 gap-12">
-                    {/* História da Empresa */}
+                    
                     <div>
                         <h3 className="text-2xl font-semibold text-[#FCA311] mb-4">
                             Nossa História

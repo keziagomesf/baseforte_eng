@@ -3,26 +3,28 @@ import Logo from '../../../../public/logolaranja.jpeg'
 
 export function Header() {
     return (
-        <header className="flex px-4 py-4 bg-[#FCA412] text-white">
+        
+            <header className="bg-[#FCA412] text-white p-4 fixed top-0 left-0 w-full z-50 shadow-md">
+
             <div className="flex items-center justify-between w-full mx-auto max-w-7xl">
-                {/* Logo e Nome da Empresa */}
+
                 <div className="flex items-center gap-4">
                     <Image 
                         src={Logo} 
                         alt="Logo Base Forte" 
-                        width={50}  // Defina um tamanho adequado
+                        width={50}  
                         height={50} 
                         className="object-contain"
                     />
-                    <span className="text-lg font-semibold">Base Forte Engenharia & Terraplanagem</span>
+                    <a href="#home"><span className="text-lg font-semibold">Base Forte Engenharia & Terraplanagem</span></a>
                 </div>
 
-                {/* Navegação */}
+
                 <nav>
                     <ul className="flex items-center justify-center gap-4">
-                        <a href="#">Sobre Nós</a>
-                        <a href="#">Serviços</a>                        
-                        <a href="#">Contato</a>
+                        <a href="#about">Sobre Nós</a>
+                        <a href="#services">Serviços</a>                        
+                        <a href="#contact">Contato</a>
                     </ul>
                 </nav>
             </div>

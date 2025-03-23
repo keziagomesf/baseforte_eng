@@ -58,8 +58,7 @@ export function Clients() {
                     modules={[Navigation, Pagination, Autoplay]}
                     spaceBetween={20}
                     slidesPerView={1}
-                    /*autoplay={{ delay: 3000 }}*/
-                    pagination={{ clickable: true }}
+                    loop={true}
                     navigation
                     breakpoints={{
                         640: { slidesPerView: 2 },

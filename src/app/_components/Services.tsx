@@ -9,7 +9,7 @@ import Conten from "../../../public/projetofic.jpg"
 import Niv from "../../../public/fundacao2.jpeg"
 
 export function Services() {
-    // Lista de serviços
+   
     const services = [
         { 
             title: "Escavação e aterro", 
@@ -59,7 +59,7 @@ export function Services() {
     ];
 
     return (
-        <section className="bg-gray-200 text-white py-16 px-6 md:px-12">
+        <section className="bg-[#1D282E] text-white py-16 px-6 md:px-12" id='services'>
             <div className="max-w-7xl mx-auto">
                 {/* Título */}
                 <h2 className="text-4xl font-bold text-[#FCA311] text-center mb-12">

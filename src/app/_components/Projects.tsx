@@ -2,7 +2,7 @@ import Image from "next/image";
 import ProFic from "../../../public/projetofic.jpg"
 
 export function Projects() {
-    // Lista de projetos fictícios
+    
     const projects = [
         { 
             title: "Infraestrutura para Complexo Industrial",
@@ -32,7 +32,7 @@ export function Projects() {
     ];
 
     return (
-        <section className="bg-[#1D282E] text-white py-16 px-6 md:px-12">
+        <section className="bg-gray-200 text-white py-16 px-6 md:px-12">
             <div className="max-w-7xl mx-auto">
                 {/* Título */}
                 <h2 className="text-4xl font-bold text-[#FCA311] text-center mb-12">
