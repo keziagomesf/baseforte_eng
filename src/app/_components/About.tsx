@@ -35,7 +35,7 @@ export function About() {
             </div>
   
             <div className="space-y-6 mt-10" data-aos="fade-up-left" data-aos-delay="300">
-              <h2 className="text-4xl font-bold">Nossa História</h2>
+              <h2 className="text-4xl font-bold text-black">Nossa História</h2>
   
               <p className="text-lg leading-relaxed text-black">
                             Fundada em <strong>2001</strong> por <strong>Luir Ferreira</strong>, a 
