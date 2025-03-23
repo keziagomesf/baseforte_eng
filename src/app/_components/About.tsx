@@ -37,14 +37,14 @@ export function About() {
             <div className="space-y-6 mt-10" data-aos="fade-up-left" data-aos-delay="300">
               <h2 className="text-4xl font-bold">Nossa História</h2>
   
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed text-black">
                             Fundada em <strong>2001</strong> por <strong>Luir Ferreira</strong>, a 
                             <span className="text-[#FCA311] font-semibold"> Base Forte Engenharia & Terraplanagem </span> 
                             nasceu com o compromisso de oferecer serviços de qualidade, pautados na 
                             <span className="font-semibold"> honestidade e confiança</span>. 
                             Com esforço e dedicação, a empresa foi crescendo e conquistando seu espaço no mercado.
                         </p>
-                        <p className="text-lg leading-relaxed mt-4">
+                        <p className="text-lg leading-relaxed mt-4 text-black">
                             Em <strong>2007</strong>, <strong>Daniel Ferreira</strong> tornou-se sócio e, 
                             junto com Luir, fortaleceu a empresa, expandindo os serviços e consolidando sua 
                             reputação no setor. Hoje, a Base Forte é referência, destacando-se pela excelência 
@@ -54,7 +54,7 @@ export function About() {
                         <h3 className="text-2xl font-semibold text-[#FCA311] mb-4">
                             Nossos Valores
                         </h3>
-                        <ul className="space-y-3">
+                        <ul className="space-y-3 text-black">
                             <li className="flex items-center gap-2">
                                 <span className="text-[#FCA311] text-xl">✔</span> 
                                 <span className="text-lg">Honestidade – Transparência e ética em todas as relações.</span>
