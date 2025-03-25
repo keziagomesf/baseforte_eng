@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import Socios from "../../../public/luirdaniel.jpeg"
 import Logo from "../../../public/logolaranja.jpeg"
 
@@ -16,9 +17,11 @@ export function About() {
                   src={Socios}
                   alt="Sócios Base Forte Engenharia e Terraplanagem"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw" 
                   quality={100}
                   className="object-cover hover:scale-110 duration-300"
-                  priority
+                  rel="preload"
+                  priority={true}
                 />
               </div>
   
@@ -27,6 +30,7 @@ export function About() {
                   src={Logo}
                   alt="Logo Base Forte Engenharia e Terraplanagem"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw" 
                   quality={100}
                   priority
                 />
@@ -35,48 +39,22 @@ export function About() {
             </div>
   
             <div className="space-y-6 mt-10" data-aos="fade-up-left" data-aos-delay="300">
-              <h2 className="text-4xl font-bold text-black">Nossa História</h2>
+              <h2 className="text-4xl font-bold text-black">Sobre Nós</h2>
   
-              <p className="text-lg leading-relaxed text-black">
-                            Fundada em <strong>2001</strong> por <strong>Luir Ferreira</strong>, a 
-                            <span className="text-[#FCA311] font-semibold"> Base Forte Engenharia & Terraplanagem </span> 
-                            nasceu com o compromisso de oferecer serviços de qualidade, pautados na 
-                            <span className="font-semibold"> honestidade e confiança</span>. 
-                            Com esforço e dedicação, a empresa foi crescendo e conquistando seu espaço no mercado.
-                        </p>
-                        <p className="text-lg leading-relaxed mt-4 text-black">
-                            Em <strong>2007</strong>, <strong>Daniel Ferreira</strong> tornou-se sócio e, 
-                            junto com Luir, fortaleceu a empresa, expandindo os serviços e consolidando sua 
-                            reputação no setor. Hoje, a Base Forte é referência, destacando-se pela excelência 
-                            e compromisso com seus clientes.
-                        </p>
-                        <div>
-                        <h3 className="text-2xl font-semibold text-[#FCA311] mb-4">
-                            Nossos Valores
-                        </h3>
-                        <ul className="space-y-3 text-black">
-                            <li className="flex items-center gap-2">
-                                <span className="text-[#FCA311] text-xl">✔</span> 
-                                <span className="text-lg">Honestidade – Transparência e ética em todas as relações.</span>
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-[#FCA311] text-xl">✔</span> 
-                                <span className="text-lg">Compromisso – Cumprimento de prazos e qualidade garantida.</span>
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-[#FCA311] text-xl">✔</span> 
-                                <span className="text-lg">Inovação – Soluções modernas para os melhores resultados.</span>
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-[#FCA311] text-xl">✔</span> 
-                                <span className="text-lg">Segurança – Prioridade na proteção de colaboradores e clientes.</span>
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-[#FCA311] text-xl">✔</span> 
-                                <span className="text-lg">Satisfação do Cliente – Superamos expectativas e criamos parcerias.</span>
-                            </li>
-                        </ul>
-                    </div>
+             
+                <p className="text-lg leading-relaxed text-black">
+                   <span className="text-[#FCA311] font-semibold">Base Forte Engenharia e Terraplanagem</span> é liderada por <strong>Luir Ferreira e Daniel Ferreira</strong>, profissionais com mais de <strong>20 anos de experiência</strong> no mercado da engenharia civil. Com uma trajetória marcada por conquistas e reconhecimento, a empresa se destaca pelo compromisso com a <strong>inovação e o empreendedorismo</strong>, sempre buscando excelência em cada projeto realizado.
+                   </p>
+              
+
+            
+                <p className="text-lg leading-relaxed text-black">
+                   Nossos pilares são <strong>honestidade, compromisso e satisfação do cliente</strong>, valores que nos consolidam como referência no setor. Construímos com qualidade e confiança, transformando desafios em grandes realizações.</p>
+ 
+
+             <Link href="/Sobre">
+             <button className="px-6 py-3 bg-[#FCA311] font-semibold rounded-lg hover:bg-[#fca2119a] transition duration-300 text-[#1D282E]">Saiba Mais</button>
+             </Link>          
           
             </div>
           </div>

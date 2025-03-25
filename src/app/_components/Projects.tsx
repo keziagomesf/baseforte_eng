@@ -48,8 +48,10 @@ export function Projects() {
                                 <Image 
                                     src={project.image} 
                                     alt={project.title} 
-                                    layout="fill"
-                                    objectFit="cover"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    style={{ objectFit: "cover" }} 
+                                    priority
                                 />
                             </div>
 

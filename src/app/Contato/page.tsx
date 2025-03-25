@@ -4,7 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-export function Contact() {
+export default function Contato() {
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -12,12 +13,6 @@ export function Contact() {
         message: "",
     });
 
-    // Atualiza os campos do formulário
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    // Envio para WhatsApp
     const sendWhatsAppMessage = () => {
         const { name, email, phone, message } = formData;
         const whatsappMessage = `Olá, gostaria de saber mais sobre os serviços de engenharia e terraplanagem`;
@@ -25,13 +20,37 @@ export function Contact() {
         window.open(whatsappURL, "_blank");
     };
 
-    return (
-        <footer className="bg-[#1D282E] text-white py-12 px-6" id="contact">
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    return(
+        <footer className="bg-[#1D282E] text-white py-50 px-6">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-               
                 <div>
-                    <h3 className="text-2xl font-bold text-[#FCA311] mb-6">Entre em Contato</h3>
-                    <form className="space-y-4">
+                    <h2 className="text-3xl font-bold text-[#FCA311] ">Entre em contato com a nossa equipe através do formulário ao lado:</h2>
+                    <h3 className="text-[#FCA311] text-2xl font-semibold mt-4 mb-10">Ou utilize um dos canais abaixo:</h3>
+                    <div className="flex space-x-6">
+
+                        <Link href="https://www.instagram.com/baseforte.eng/" target="_blank">
+                            <FaInstagram className="text-3xl hover:text-[#FCA311] transition cursor-pointer mt-2" />
+                        </Link>
+                        
+                        <Link href="https://www.linkedin.com/company/base-forte-engenharia-e-terraplanagem/" target="_blank">
+                            <FaLinkedin className="text-3xl hover:text-[#FCA311] transition cursor-pointer mt-2" />
+                        </Link>
+                        <button
+                            type="button"
+                            onClick={sendWhatsAppMessage}
+                            className="text-3xl hover:text-[#FCA311] transition cursor-pointer"
+                        >
+                        <FaWhatsapp className="inline" />
+                        </button>
+                    </div>
+                    
+                </div>
+                <div>
+                <form className="space-y-4">
                         <input
                             type="text"
                             name="name"
@@ -65,33 +84,16 @@ export function Contact() {
                             className="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400"
                         />
                         <button
-                            type="button"
-                            onClick={sendWhatsAppMessage}
-                            className="w-full bg-[#FCA311] text-[#1D282E] font-bold py-3 rounded-lg hover:bg-[#e58b00] transition"
-                        >
-                            Faça seu orçamento via WhatsApp <FaWhatsapp className="inline ml-2" />
-                        </button>
-                    </form>
-                </div>
-
-                {/* Redes Sociais */}
-                <div className="flex flex-col items-center md:items-start">
-                    <h3 className="text-2xl font-bold text-[#FCA311] mb-6">Siga-nos</h3>
-                    <div className="flex space-x-6">
-                        <Link href="https://www.instagram.com/baseforte.eng/" target="_blank">
-                            <FaInstagram className="text-3xl hover:text-[#FCA311] transition cursor-pointer" />
-                        </Link>
+                    type="button"
+                    onClick={() => window.location.href = `mailto:adm@baseforteterraplanagem.com?subject=Contato&body=${formData.message}`}
+                    className="w-full bg-[#FCA311] text-[#1D282E] font-bold py-3 rounded-lg hover:bg-[#e58b00] transition"
+                    >
+                    Enviar E-mail
+                            </button>
                         
-                       
-                        <Link href="https://www.linkedin.com/company/base-forte-engenharia-e-terraplanagem/" target="_blank">
-                            <FaLinkedin className="text-3xl hover:text-[#FCA311] transition cursor-pointer" />
-                        </Link>
-                    </div>
+                    </form> 
                 </div>
-            </div>
-            <div className="text-center text-sm text-gray-400 mt-10">
-                © {new Date().getFullYear()} Base Forte Engenharia & Terraplanagem. Todos os direitos reservados.
             </div>
         </footer>
-    );
+    )
 }

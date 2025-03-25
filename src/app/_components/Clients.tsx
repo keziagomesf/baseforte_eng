@@ -46,23 +46,23 @@ export function Clients() {
         { name: "Concrevit", image: cliente16 },
         { name: "Grupo Vessa", image: cliente17 },
     ];
-
+ 
     return (
-        <section className="bg-[#1D282E] text-white py-16 px-6">
+        <section className="bg-gray-200 text-white py-16 px-6">
             <div className="max-w-7xl mx-auto text-center">
-                <h2 className="text-4xl font-bold text-[#FCA311] mb-8">
+                <h2 className="text-4xl font-bold text-[#1D282E] mb-8">
                     Nossos Clientes
-                </h2>
+                </h2> 
                 
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
-                    spaceBetween={20}
-                    slidesPerView={1}
+                    spaceBetween={50}
+                    slidesPerView={4}
                     loop={true}
                     navigation
                     breakpoints={{
-                        640: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 },
+                        640: { slidesPerView: 3 },
+                        1024: { slidesPerView: 4 },
                     }}
                     className="w-full"
                 >
@@ -73,9 +73,11 @@ export function Clients() {
                                     <Image
                                         src={client.image}
                                         alt={client.name}
-                                        layout="fill"
-                                        objectFit="cover"
+                                        fill
+                                        style={{ objectFit: "cover" }} 
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                         className="rounded-md"
+                                        priority
                                     />
                                 </div>
                                 <h3 className="text-[#1D282E] text-lg font-semibold mt-4">{client.name}</h3>
