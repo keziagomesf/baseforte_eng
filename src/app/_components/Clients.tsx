@@ -48,7 +48,7 @@ export function Clients() {
     ];
  
     return (
-        <section className="bg-gray-200 text-white py-16 px-6">
+        <section className="bg-gray-200 text-white py-16 px-6 md:px-12">
             <div className="max-w-7xl mx-auto text-center">
                 <h2 className="text-4xl font-bold text-[#1D282E] mb-8">
                     Nossos Clientes
@@ -56,31 +56,33 @@ export function Clients() {
                 
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
-                    spaceBetween={50}
-                    slidesPerView={4}
+                    spaceBetween={15}
                     loop={true}
                     navigation
                     breakpoints={{
-                        640: { slidesPerView: 3 },
-                        1024: { slidesPerView: 4 },
+                        320: {slidesPerView: 2,},
+                        640: { slidesPerView: 3, spaceBetween:20 },
+                        1024: { slidesPerView: 4, spaceBetween:30 },
                     }}
                     className="w-full"
                 >
                     {clients.map((client, index) => (
                         <SwiperSlide key={index} className="flex justify-center">
-                            <div className="bg-white p-4 rounded-lg shadow-lg w-full max-w-xs">
-                                <div className="relative w-full h-40">
+                            <div className="bg-white p-4 rounded-lg shadow-lg overflow-hidden min-h-[350px] md:min-h-[450px] flex flex-col">
+                                <div className="relative w-full h-[180px] md:h-[250px]">
                                     <Image
                                         src={client.image}
                                         alt={client.name}
                                         fill
                                         style={{ objectFit: "cover" }} 
                                         sizes="(max-width: 768px) 100vw, 50vw"
-                                        className="rounded-md"
+                                        className="rounded-t-lg"
                                         priority
                                     />
                                 </div>
-                                <h3 className="text-[#1D282E] text-lg font-semibold mt-4">{client.name}</h3>
+                                <div className="p-4 md:p-6 flex flex-col flex-grow">
+                                    <h3 className="text-[#1D282E] text-lg font-semibold mt-2 line-clamp-3 md:text-lg">{client.name}</h3>
+                                </div>
                             </div>
                         </SwiperSlide>
                     ))}
